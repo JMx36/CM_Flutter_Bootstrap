@@ -1,0 +1,34 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "memorygameapp-c304c",
+          "appId": "1:27770271794:android:f8d3d0aba89dc22c2b642b",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "memorygameapp-c304c",
+          "configurations": {
+            "android": "1:27770271794:android:f8d3d0aba89dc22c2b642b",
+            "web": "1:27770271794:web:69a9ef03f2e54de22b642b"
+          }
+        }
+      }
+    }
+  },
+  "emulators": {
+    "auth": {
+      "port": 9099
+    },
+    "database": {
+      "port": 9000
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  }
+}
