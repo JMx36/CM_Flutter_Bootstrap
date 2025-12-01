@@ -87,12 +87,23 @@ class _SignupFormState extends State<SignupForm> {
         return;
       }
 
+      try {
+        await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailEC.text,
+          password: passwordEC.text,
+        );
+        emailError = null;
+        passwordError = null;
+        return;
+      } on FirebaseAuthException catch (e) {
+        print("No Account Located. Attempting creating account");
+      }
+
       final credential = await FirebaseAuth.instance
           .createUserWithEmailAndPassword(
             email: emailEC.text,
             password: passwordEC.text,
           );
-
       emailError = null;
       passwordError = null;
     } on FirebaseAuthException catch (e) {
